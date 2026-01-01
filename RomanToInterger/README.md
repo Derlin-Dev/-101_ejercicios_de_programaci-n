@@ -1,48 +1,60 @@
-# -101_ejercicios_de_programaci-n
+# 🧠 101 Ejercicios de Programación
 
-## Fuente : LeetCode -> https://leetcode.com/problems/two-sum/description/
-
-## 🧮 Two Sum (Suma de dos números)
-
-Dada una matriz de números enteros `nums` y un número entero `target`, devuelve los **índices de los dos números** tales que su suma sea igual a `target`.
-
-Puedes asumir que **siempre habrá exactamente una solución**, y **no puedes usar el mismo elemento dos veces**.
-
-La respuesta puede devolverse en cualquier orden.
+## 📌 Fuente
+**LeetCode**  
+🔗 https://leetcode.com/problems/roman-to-integer/
 
 ---
 
-## 📌 Ejemplos
+## 🧮 Roman to Integer (De Romano a Entero)
 
-### ✔️ Ejemplo 1
-**Entrada:**  
-`nums = [2,7,11,15]`, `target = 9`  
-**Salida:**  
-`[0,1]`  
-**Explicación:**  
-Como `nums[0] + nums[1] == 9`, devolvemos `[0, 1]`.
+Los números romanos están representados por siete símbolos diferentes:
+
+| Símbolo | Valor |
+|---------|-------|
+| I       | 1     |
+| V       | 5     |
+| X       | 10    |
+| L       | 50    |
+| C       | 100   |
+| D       | 500   |
+| M       | 1000  |
+
+### 📖 Descripción
+
+Por ejemplo:
+- **2** se escribe como `II`
+- **12** se escribe como `XII` (X + II)
+- **27** se escribe como `XXVII` (XX + V + II)
+
+Los números romanos suelen escribirse de **mayor a menor**, de izquierda a derecha.  
+Sin embargo, existen casos especiales donde se aplica la **resta** en lugar de la suma.
+
+### 🔻 Casos de resta permitidos
+
+- `I` antes de `V` (5) o `X` (10) → **4 y 9**
+- `X` antes de `L` (50) o `C` (100) → **40 y 90**
+- `C` antes de `D` (500) o `M` (1000) → **400 y 900**
+
+🎯 **Objetivo:**  
+Dado un número romano, conviértelo en un número entero.
 
 ---
 
-### ✔️ Ejemplo 2
-**Entrada:**  
-`nums = [3,2,4]`, `target = 6`  
-**Salida:**  
-`[1,2]`
+## 🧪 Ejemplos
 
----
+### Ejemplo 1
+**Entrada: s = "III"***
+Explicación: III=3.
 
-### ✔️ Ejemplo 3
-**Entrada:**  
-`nums = [3,3]`, `target = 6`  
-**Salida:**  
-`[0,1]`
+### Ejemplo 2
+***Entrada: s = "LVIII"***
+Salida: 58
+Explicación: L = 50, V = 5, III = 3.
 
----
+### Ejemplo 3:
 
-## 🔒 Restricciones
+***Entrada: s = "MCMXCIV"***
+Salida: 1994
+Explicación: M = 1000, CM = 900, XC = 90 y IV = 4.
 
-- `2 <= nums.length <= 10^4`
-- `-10^9 <= nums[i] <= 10^9`
-- `-10^9 <= target <= 10^9`
-- Solo existe **una única solución válida**.
